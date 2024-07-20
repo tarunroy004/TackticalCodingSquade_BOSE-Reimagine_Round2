@@ -49,10 +49,6 @@
     cursor: none;
     cursor: url("https://img.icons8.com/?size=24&id=TVppPfbzSk3y&format=png"), auto;
 }
-*::selection {
-    background-color: #272727;
-    color: #fff;
-}
 
 html {
     height: 100%;
@@ -68,15 +64,6 @@ body {
     cursor: url("https://img.icons8.com/?size=80&id=f7hiyiAbABne&format=png"), auto;
 }
 
-/* Mouse Follower */
-/* #mouseFollower {
-    height: 35px;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    opacity: 1;
-    transform: rotateZ(10deg);
-} */
 .circle {
     height: 1px;
     width: 1px;
@@ -278,7 +265,7 @@ body {
     transform: rotateZ(0deg);
 }
 
-marquee {
+#marquee {
     display: flex;
     justify-content: flex-start;
     overflow: hidden;
@@ -286,7 +273,7 @@ marquee {
     bottom: 0;
     left: 0;
 }
-marquee h1 {
+#marquee h1 {
     font-family: Gilroy-sbold;
     font-size: 7rem;
     text-transform: uppercase;
@@ -420,13 +407,61 @@ marquee h1 {
     color: #000;
 }
 
+#container2 #item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 20px; */
+}
+#container2 #item1 #top {
+    height: 50%;
+    width: 97.7%;
+    background-color: #dadada;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#container2 #item1 #top marquee {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#container2 #item1 #top marquee h1 {
+    font-family: Gilroy-bold;
+    text-transform: uppercase;
+    font-size: 20rem;
+    color: #000;
+}
+
+#container2 #item1 #bott {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#container2 #item1 #bott #left, #right {
+    margin: 20px;
+    width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#container2 #item1 #bott img {
+    width: 100%;
+    border-radius: 20px;
+}
+
 #container2 #item2 {
     display: grid;
     place-items: center;
     position: relative;
 }
 #container2 #item2 video {
-    height: 90vh;
+    height: 100%;
 }
 #container2 #item2 img {
     position: absolute;
@@ -450,8 +485,8 @@ marquee h1 {
     left: 50%;
     bottom: 5%;
     font-family: Gilroy-bold;
-    color: #fff;
-    font-size: 2rem;
+    color: #000;
+    font-size: 3rem;
     letter-spacing: 5px;
 }
 
@@ -600,6 +635,9 @@ marquee h1 {
     font-size: 1.1rem;
     text-transform: capitalize;
 }
+#footer #bott #top a:hover {
+    color: #f7ff9c;
+}
 #footer #bott #bot{
     height: fit-content;
     width: 100%;
@@ -636,3 +674,9 @@ marquee h1 {
     color: #dadada;
     font-family: Gilroy-light;
 }
+
+/*  */
+*::selection {
+    background-color: transparent;
+}
+/*  */
