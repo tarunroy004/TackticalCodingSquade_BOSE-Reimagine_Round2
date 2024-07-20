@@ -341,6 +341,10 @@ function mouseFollower() {
     "transparent",
     "transparent",
     "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
+    "transparent",
     "#b7b7b7",
     "#a7a7a7",
     "#979797",
@@ -382,8 +386,8 @@ function mouseFollower() {
         let y = coords.y;
     
         circles.forEach(function (circle, index) {
-            circle.style.left = x - 0 + "px";
-            circle.style.top = y - 0 + "px";
+            circle.style.left = x - -11 + "px";
+            circle.style.top = y - -18 + "px";
         
             circle.style.scale = (circles.length - index) / circles.length;
         

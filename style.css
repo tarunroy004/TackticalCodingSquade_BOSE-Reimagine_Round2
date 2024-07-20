@@ -47,9 +47,11 @@
     margin: 0;
     box-sizing: border-box;
     cursor: none;
+    cursor: url("https://img.icons8.com/?size=24&id=TVppPfbzSk3y&format=png"), auto;
 }
 *::selection {
     background-color: #272727;
+    color: #fff;
 }
 
 html {
@@ -63,6 +65,7 @@ body {
     width: 100%;
     scrollbar-width: none;
     overflow-y: hidden;
+    cursor: url("https://img.icons8.com/?size=80&id=f7hiyiAbABne&format=png"), auto;
 }
 
 /* Mouse Follower */
@@ -275,33 +278,37 @@ body {
     transform: rotateZ(0deg);
 }
 
+marquee {
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+marquee h1 {
+    font-family: Gilroy-sbold;
+    font-size: 7rem;
+    text-transform: uppercase;
+    color: #252525;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    animation: move 6000ms linear infinite;
+}
+
 /* PAGE2 */
 
 #page2 {
     min-height: 100vh;
     width: 100%;
-    background-color: #fff;
+    background-image: linear-gradient(180deg, #fff , #000);
     position: relative;
 }
 
-#page2 img {
-    width: 40vw;
-    position: absolute;
-    transform: translate(0, -50%);
+#page2 video {
+    margin-top: 20vh;
+    width: 100%;
 }
-
-#page2 #img1 {
-    z-index: 10;
-    top: 50%;
-    right: 50%;
-}
-
-#page2 #img2 {
-    z-index: 10;
-    top: 50%;
-    left: 50%;
-}
-
 /* PAGE 3 */
 
 .page3, .footer {
