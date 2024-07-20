@@ -391,7 +391,7 @@ function mouseFollower() {
         let y = coords.y;
     
         circles.forEach(function (circle, index) {
-            circle.style.left = x - -11 + "px";
+            circle.style.left = x - -18 + "px";
             circle.style.top = y - -18 + "px";
         
             circle.style.scale = (circles.length - index) / circles.length;
