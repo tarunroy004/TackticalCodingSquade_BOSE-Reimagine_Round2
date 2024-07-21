@@ -460,6 +460,24 @@ body {
     place-items: center;
     position: relative;
 }
+#container2 #item2 #click {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    transform: translate(-88%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Gilroy-med;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 3px;
+    background-color: #00000093;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
 #container2 #item2 video {
     height: 100%;
 }
@@ -680,3 +698,83 @@ body {
     background-color: transparent;
 }
 /*  */
+
+
+@media only screen and (max-width: 576px) {
+    .circle {
+        display: none;
+    }
+
+    body {
+        overflow-y: hidden;
+        touch-action: none;
+    }
+
+    #page1 #bose {
+        height: 170px;
+        width: 100%;
+    }
+    
+    #page1 #bose .letterOFbose {
+        font-size: 12rem;
+    }
+
+    #page1 #bose #BofBOSE {
+        top: -60%;
+        left: 0;
+    }
+    #page1 #bose #OofBOSE {
+        left: 18.7%;
+        height: 10rem;
+    }
+    #page1 #bose #SofBOSE {
+        top: -60%;
+        left: 50%;
+    }
+    #page1 #bose #EofBOSE {
+        top: 160%;
+        right: 0;
+    }
+    
+    #page1 #bose .hdphn {
+        height: 10.5rem;
+    }
+    
+    #page1 #bose #one {
+        left: -6%;
+    }
+    #page1 #bose #two {
+        left: 18.7%;
+        top: 160%;
+    }
+    #page1 #bose #thrd {
+        left: 48.5%;
+    }
+    #page1 #bose #frth {
+        right: 9%;
+    }
+    #page1 #bose #OofBOSE {
+        height: 10.5rem;
+    }
+    
+    #page1 nav #right {
+        display: none;
+    }
+
+    #marquee h1 {
+        font-size: 4rem;
+    }
+    
+    #page2 {
+        display: none;
+    }
+    #container {
+        display: none;
+    }
+    #container2 {
+        display: none;
+    }
+    #footer {
+        display: none;
+    }
+}

@@ -98,24 +98,24 @@ function letterANI() {
 
 
     gsap.to("#page1 #bose #one", {
-        top: "140%",
+        top: "160%",
         duration : "0.8",
         ease: "expo.inOut",
         delay: "0.4"
     })
     gsap.to("#page1 #bose #OofBOSE", {
-        top: "-40%",
+        top: "-60%",
         duration : "0.8",
         ease: "expo.inOut",
     })
     gsap.to("#page1 #bose #thrd", {
-        top: "140%",
+        top: "160%",
         duration : "0.8",
         ease: "expo.inOut",
         delay: "0.2"
     })
     gsap.to("#page1 #bose #frth", {
-        top: "-40%",
+        top: "-60%",
         duration : "0.8",
         ease: "expo.inOut",
         delay: "0.6"
@@ -311,6 +311,19 @@ gsap.to("#container2", {
     }
 })
 
+document.querySelector("#container2 #item2 video").addEventListener("mousemove", function(dets) {
+    gsap.to("#click", {
+        top: dets.y,
+        left: dets.x,
+        opacity: 1,
+    })
+})
+document.querySelector("#container2 #item2 video").addEventListener("mouseleave", function(dets) {
+    gsap.to("#click", {
+        opacity: 0,
+    })
+})
+
 
 //FOOTER
 gsap.to("#footer", {
@@ -354,15 +367,23 @@ function mouseFollower() {
     "#a7a7a7",
     "#979797",
     "#888888",
+    "#808080",
     "#767676",
     "#7e7e7e",
+    "#707070",
     "#676767",
+    "#606060",
     "#5b5b5b",
+    "#505050",
     "#4b4b4b",
     "#404040",
+    "#404040",
     "#3a3a3a",
+    "#303030",
+    "#282828",
     "#2d2d2d",
     "#2c2c2c",
+    "#202020",
     "#171717",
     "#161616",
     "#151515",
@@ -400,8 +421,8 @@ function mouseFollower() {
             circle.y = y;
 
             const nextCircle = circles[index + 1] || circles[0];
-            x += (nextCircle.x - x) * 0.3;
-            y += (nextCircle.y - y) * 0.3;
+            x += (nextCircle.x - x) * 0.28;
+            y += (nextCircle.y - y) * 0.28;
         });
     
         requestAnimationFrame(animateCircles);
@@ -409,3 +430,9 @@ function mouseFollower() {
 
     animateCircles();
 };
+
+
+// Mobile View 
+if(window.innerWidth <= 576) {
+    document.querySelector("#marquee h1").innerText = "This website can't be opened on mobile. For a better experience, please open it on a desktop or laptop.";
+}
