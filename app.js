@@ -1,3 +1,24 @@
+const load = 0
+window.addEventListener("load", () => {
+    load = 1
+})
+if (load==0) {
+    gsap.to("#mask", {
+        opacity: 0,
+        top : "-100%",
+        duration : "1",
+        ease: "expo.inOut",
+    })
+} else {
+    gsap.to("#mask", {
+        opacity: 1,
+        top : "0",
+        duration : "1",
+        ease: "expo.inOut",
+    })
+}
+
+// Reload
 window.addEventListener('beforeunload', function (e) {
     e.preventDefault();
     e.returnValue = '';
@@ -41,12 +62,10 @@ window.addEventListener("load", () => {
         requestAnimationFrame(raf)
 
         // Mouse Follower
+        gsap.to("#mouseFollower", {
+            opacity: 1
+        })
         mouseFollower();
-        // document.getElementById("main").addEventListener("mouseover", function(dets) {
-        //     const mF = document.querySelector("#mouseFollower");
-        //     mF.style.top = dets.y;
-        //     mF.style.left = dets.x;
-        // })
     }, 4300);
 })
 
@@ -434,5 +453,5 @@ function mouseFollower() {
 
 // Mobile View 
 if(window.innerWidth <= 576) {
-    document.querySelector("#marquee h1").innerText = "This website can't be opened on mobile. For a better experience, please open it on a desktop or laptop.";
+    document.querySelector("#marquee h1").innerHTML = "<h1>This website can't be opened on mobile. For a better experience, please open it on a desktop or laptop.</h1>";
 }

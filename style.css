@@ -64,6 +64,28 @@ body {
     cursor: url("https://img.icons8.com/?size=32&id=DHeGhyRV0V9V&format=png"), auto;
 }
 
+#mask {
+    height: 100vh;
+    width: 100vw;
+    background-color: #dadada;
+    z-index: 19991;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    display: grid;
+    place-items: center;
+}
+#mask h1 {
+    font-family: Gilroy-light;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+#mouseFollower {
+    opacity: 0;
+}
+
 .circle {
     height: 1px;
     width: 1px;
