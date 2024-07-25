@@ -1,11 +1,6 @@
-window.addEventListener("load", () => {
-    gsap.to("#mask", {
-        opacity: 0,
-        top : "-100%",
-        duration : "1",
-        ease: "expo.inOut",
-    })
-})
+// window.addEventListener("load", () => {
+    
+// })
 
 // Reload
 window.addEventListener('beforeunload', function (e) {
@@ -16,6 +11,12 @@ window.addEventListener('beforeunload', function (e) {
 
 // PRE LOAD
 window.addEventListener("load", () => {
+    gsap.to("#mask", {
+        opacity: 0,
+        top : "-100%",
+        duration : "1",
+        ease: "expo.inOut",
+    })
     inAniBOSE();
 
     setTimeout(() => {
