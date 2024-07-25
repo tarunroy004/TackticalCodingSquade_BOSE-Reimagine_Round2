@@ -1,22 +1,11 @@
-const load = 0
 window.addEventListener("load", () => {
-    load = 1
-})
-if (load==0) {
     gsap.to("#mask", {
         opacity: 0,
         top : "-100%",
         duration : "1",
         ease: "expo.inOut",
     })
-} else {
-    gsap.to("#mask", {
-        opacity: 1,
-        top : "0",
-        duration : "1",
-        ease: "expo.inOut",
-    })
-}
+})
 
 // Reload
 window.addEventListener('beforeunload', function (e) {
